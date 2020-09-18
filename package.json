@@ -6,6 +6,8 @@
   "license": "MIT",
   "repository": "https://github.com/dnjsvltm201311681/movieql",
   "dependencies": {
+    "axios": "^0.20.0",
+    "cors": "^2.8.5",
     "graphql-yoga": "^1.18.3",
     "node-fetch": "^2.6.0"
   },
