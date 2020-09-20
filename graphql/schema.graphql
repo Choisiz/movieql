@@ -1,6 +1,8 @@
 type Movie {
   id: Int!
   title: String!
+  title_long: String!
+  runtime: Int!
   rating: Float
   description_full: String
   description_intro: String
