@@ -12,11 +12,14 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-stage-3": "^7.8.3",
     "axios": "^0.21.1",
+    "copy": "^0.3.2",
     "cors": "^2.8.5",
     "graphql-yoga": "^1.18.3",
     "node-fetch": "^2.6.1"
   },
   "scripts": {
+    "build": "babel src -d build",
+    "postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
     "start": "nodemon  --exec babel-node src/index.js"
   }
 }
