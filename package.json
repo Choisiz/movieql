@@ -5,6 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/dnjsvltm201311681/movieql",
+  "engines":{
+    "node":"12.13.0",
+    "yarn":"1.22.5"
+  },
   "dependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
