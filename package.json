@@ -15,12 +15,13 @@
     "copy": "^0.3.2",
     "cors": "^2.8.5",
     "graphql-yoga": "^1.18.3",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7"
   },
   "scripts": {
     "dev": "nodemon  --exec babel-node src/index.js",
     "build": "babel src -d build",
     "postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
-    "start":"node build/index.js"
+    "start": "node build/index.js"
   }
 }
