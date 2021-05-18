@@ -18,8 +18,9 @@
     "node-fetch": "^2.6.1"
   },
   "scripts": {
+    "dev": "nodemon  --exec babel-node src/index.js",
     "build": "babel src -d build",
     "postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
-    "start": "nodemon  --exec babel-node src/index.js"
+    "start":"node build/index.js"
   }
 }
