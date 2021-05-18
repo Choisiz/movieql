@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "nodemon  --exec babel-node src/index.js",
     "build": "babel src -d build",
-    "postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
+    "heroku-postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
     "start": "node build/index.js"
   }
 }
