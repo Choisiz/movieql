@@ -5,14 +5,16 @@
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/dnjsvltm201311681/movieql",
-  "engines":{
-    "node":"12.13.0",
-    "yarn":"1.22.5"
+  "engines": {
+    "node": "12.13.0",
+    "yarn": "1.22.5",
+    "npm": "6.12.0"
   },
   "dependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-stage-3": "^7.8.3",
     "axios": "^0.21.1",
@@ -25,7 +27,8 @@
   "scripts": {
     "dev": "nodemon  --exec babel-node src/index.js",
     "build": "babel src -d build",
-    "heroku-postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
+    "heroku-postbuild": "yarn run build",
+    "postbuild": "cd src && npx copy ./graphql/*.graphql ../build/graphql/",
     "start": "node build/index.js"
   }
 }
